@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0828012e6edc1f43913fce9441ff495, type: 3}
-  m_Name: Agente
+  m_Name: Fedor
   m_EditorClassIdentifier: 
   posicoes:
-  - {x: 5, y: 6}
-  tipo: agente
+  - {x: 1, y: 4}
+  - {x: 2, y: 3}
+  - {x: 1, y: 2}
+  tipo: fedor

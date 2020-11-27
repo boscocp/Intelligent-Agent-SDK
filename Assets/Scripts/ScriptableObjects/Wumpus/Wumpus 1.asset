@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cb60ec23442a14784e4d609a2049fa, type: 3}
+  m_Name: Wumpus 1
+  m_EditorClassIdentifier: 
+  linhas: 6
+  colunas: 6
+  objetos:
+  - {fileID: 11400000, guid: d5c5b43b24ee0fe45b45f84bd257ba49, type: 2}
+  - {fileID: 11400000, guid: d03dc272761922e43adb1b3fc0ca6467, type: 2}
+  - {fileID: 11400000, guid: c3d389f26798c2f47821dba424728c9a, type: 2}
+  - {fileID: 11400000, guid: 9236b604a436fc54ea90d0a43d5b1e2d, type: 2}
+  - {fileID: 11400000, guid: 302355470ad5a154b9cc9f86529ab86a, type: 2}
+  - {fileID: 11400000, guid: ec433cd32dc3d8748ac320329436bb74, type: 2}

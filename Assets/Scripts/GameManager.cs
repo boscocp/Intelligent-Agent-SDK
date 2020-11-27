@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     public List<string> agentes;
     public int _velocidadeJogo = 2;
     public int VelocidadeJogo { get => _velocidadeJogo; set => _velocidadeJogo = value; }
-    private IAgenteManager _agenteManager;
     private IMapaManager _mapaManager;
     public int mapaEscolhido = 0;
     public List<ScriptableObject> mapasSO;
@@ -29,7 +28,6 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
-        _agenteManager = gameObject.GetComponent<IAgenteManager>();
         _mapaManager = gameObject.GetComponent<IMapaManager>();
     }
     void Start()
