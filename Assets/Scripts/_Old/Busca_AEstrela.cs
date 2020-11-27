@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 
 
-public class Busca_AEstrela : Busca, IBusca
+public class Busca_AEstrela_Old : Busca_Old, IBusca
 {
     void Start()
     {
@@ -84,7 +84,7 @@ public class Busca_AEstrela : Busca, IBusca
             }
         }
         
-        return BuscaUtil.MontaCaminho(TileInicial.Id, tileAtual, Pais);
+        return BuscaUtil_Old.MontaCaminho(TileInicial.Id, tileAtual, Pais);
     }
 
     private float CalcularF(int tile)

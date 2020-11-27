@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Busca_Largura : Busca, IBusca
+public class Busca_Largura_Old : Busca_Old, IBusca
 {
     private int _inicial, _final;
     public List<int> Executar()
@@ -34,7 +34,7 @@ public class Busca_Largura : Busca, IBusca
 
             if (tileAtual == TileObjetivo)
             {
-                return BuscaUtil.MontaCaminho(_inicial, _final, Pais);
+                return BuscaUtil_Old.MontaCaminho(_inicial, _final, Pais);
             }
             else
             {

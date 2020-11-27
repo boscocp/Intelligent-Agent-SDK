@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Busca_Profundidade : Busca, IBusca
+public class Busca_Profundidade_Old : Busca_Old, IBusca
 
 {
     private int _inicial, _final;
@@ -35,7 +35,7 @@ public class Busca_Profundidade : Busca, IBusca
 
             if (tileAtual == TileObjetivo)
             {
-                return BuscaUtil.MontaCaminho(_inicial, _final, Pais);
+                return BuscaUtil_Old.MontaCaminho(_inicial, _final, Pais);
             }
             else
             {

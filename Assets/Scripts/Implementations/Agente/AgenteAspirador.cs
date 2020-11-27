@@ -5,7 +5,7 @@ using UnityEngine;
 public class AgenteAspirador : Agente
 {
     private string nome = "Nome";//TODO: por na hora de instanciar o agente
-    public int maximoPassos = 150;
+    public int maximoPassos = 2;
     private int _score = 0; //PEAS Performance, Envioriment, Atuador e Sensores
     public int Score { get => _score; set => _score = value; }
     private int steps = 0;
@@ -14,19 +14,24 @@ public class AgenteAspirador : Agente
         base.Start();
         Moving = true;
         nome = titulo.text;
+        Destino = Vector3Int.RoundToInt(transform.position + transform.forward);
     }
 
     public override void Ligar()
     {
         StartCoroutine(LigarRotina());
     }
+
     IEnumerator LigarRotina()//TODO: tentar tirar do IEnumerator e deixar o processamento fora
     {                        //Dica: tentar fazer um esquema de foreach de lista de string de comando
         
         float random = UnityEngine.Random.Range(0f, 10f);
         while (steps < maximoPassos)
         {
-            
+            while(!Input.GetKeyDown(KeyCode.N))
+            {
+                yield return null;
+            }
             titulo.text = nome+ ": " + Score;
             if (random < 6f)
             {
@@ -73,14 +78,22 @@ public class AgenteAspirador : Agente
 
     private void MoverFrente()
     {
-        StartCoroutine(AgenteUtil.MoverFrente(this, _obstaculos));
-        if(!AgenteUtil.VerificarObstaculo(this,_obstaculos,(int)Destino.x,(int)Destino.z)) Score -= 1;
+        List<IMapaObjeto> agentesMO = GameManager.Instance.MapaAtual.RecuperarObjetosPor("agente");
+        List<Agente> agentes = new List<Agente>();
+        
+        foreach (MapaObjeto objeto in agentesMO)
+        {
+            agentes.Add(objeto.GetComponent<Agente>());
+        }
+        StartCoroutine(AgenteUtil.MoverFrente(this, _obstaculos, agentes));
+        //if(!AgenteUtil.VerificarObstaculo(this,_obstaculos,Destino.x,Destino.z)) Score -= 1;
     }
     private void RemoveSujeira()
     {
-        if (GameManager.Instance.MapaAtual.RemoverObjeto((int)Mathf.Round(transform.position.x), (int)Mathf.Round(transform.position.z), "sujeira"))
+        int linha = (int)Mathf.Round(transform.position.x);
+        int coluna = (int)Mathf.Round(transform.position.z);
+        if (GameManager.Instance.MapaAtual.RemoverObjeto(linha, coluna, "sujeira"))
         {
-            Debug.Log((int)transform.position.x+" "+(int)transform.position.z);
             Score += 10;
         }
     }

@@ -10,17 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0828012e6edc1f43913fce9441ff495, type: 3}
-  m_Name: AgentesReativos
+  m_Name: Colecao
   m_EditorClassIdentifier: 
-  posicoes:
-  - {x: 5, y: 5}
-  - {x: 5, y: 6}
-  - {x: 5, y: 7}
-  - {x: 5, y: 4}
-  - {x: 5, y: 3}
-  - {x: 5, y: 2}
-  - {x: 5, y: 1}
-  - {x: 3, y: 5}
-  - {x: 3, y: 6}
-  - {x: 3, y: 7}
-  tipo: agente
+  posicoes: []
+  tipo: 

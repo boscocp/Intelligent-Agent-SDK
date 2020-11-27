@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Busca : MonoBehaviour
+public class Busca_Old : MonoBehaviour
 {
     private int _inicial, _final;
     private bool _configurado = false;

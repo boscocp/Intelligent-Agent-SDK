@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-public class BuscaUtil
+public class BuscaUtil_Old
 {
     // Start is called before the first frame update
     public static List<int> MontaCaminho(int tileInicial, int tileFinal, Dictionary<int, int> Pais)

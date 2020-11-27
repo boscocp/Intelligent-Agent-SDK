@@ -349,6 +349,7 @@ MonoBehaviour:
   _obstaculos:
   - parede
   - borda
+  - agente
   maximoPassos: 150
 --- !u!1 &1881060302589915488
 GameObject:

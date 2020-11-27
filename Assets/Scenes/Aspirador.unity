@@ -354,7 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentes:
   - agente
-  _velocidadeJogo: 10
+  _velocidadeJogo: 5
   mapaEscolhido: 0
   mapasSO:
   - {fileID: 11400000, guid: dd422aa2c97d2d140af515620aa989ff, type: 2}

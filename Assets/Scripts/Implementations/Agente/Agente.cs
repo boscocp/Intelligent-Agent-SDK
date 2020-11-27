@@ -12,7 +12,7 @@ public class Agente : MonoBehaviour, IAgente
     public float TimeCorroutine { get; set; }
     public bool Ligado { get; set; }
     public bool Moving { get; set; }
-    public Vector3 Destino { get; set; }
+    public Vector3Int Destino { get; set; }
     public float DistanciaMinima { get => _distanciaMinima; set => _distanciaMinima = value; }
     private float _distanciaMinima = 0.001f;
 
@@ -36,7 +36,6 @@ public class Agente : MonoBehaviour, IAgente
     {
         Debug.Log("Atuou");
     }
-
     public void Desligar()
     {
         Ligado = false;
@@ -52,5 +51,11 @@ public class Agente : MonoBehaviour, IAgente
     {
         string aux = gameObject.GetComponent<IMapaObjeto>().RecuperarLinha().ToString()+gameObject.GetComponent<IMapaObjeto>().RecuperarColuna().ToString();
         return gameObject.GetComponent<IMapaObjeto>().RecuperarTipo()+"_"+aux.ToString();
+    }
+
+    public void AtualizaAgente()
+    {
+        Vector3Int aux = Vector3Int.RoundToInt(transform.position);
+        GetComponent<IMapaObjeto>().Atualizar(aux.x, aux.z, GetComponent<IMapaObjeto>().RecuperarTipo());
     }
 }
