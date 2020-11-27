@@ -16,3 +16,4 @@ MonoBehaviour:
   colunas: 15
   objetos:
   - {fileID: 11400000, guid: 0bef5b2ef19a867419608a18081e2097, type: 2}
+  - {fileID: 11400000, guid: 0cc185eabf565b64a84650a6535b608b, type: 2}

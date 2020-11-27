@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0828012e6edc1f43913fce9441ff495, type: 3}
-  m_Name: Colecao
+  m_Name: Agente
   m_EditorClassIdentifier: 
-  posicoes: []
-  tipo: 
+  posicoes:
+  - {x: 5, y: 6}
+  tipo: agente

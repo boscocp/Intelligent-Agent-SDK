@@ -49,13 +49,15 @@ public class Agente : MonoBehaviour, IAgente
     }
     private string RecuperarNome()
     {
-        string aux = gameObject.GetComponent<IMapaObjeto>().RecuperarLinha().ToString()+gameObject.GetComponent<IMapaObjeto>().RecuperarColuna().ToString();
-        return gameObject.GetComponent<IMapaObjeto>().RecuperarTipo()+"_"+aux.ToString();
+        IMapaObjeto mapaObjeto = gameObject.GetComponent<IMapaObjeto>();
+        string aux = mapaObjeto.RecuperarLinha().ToString()+ mapaObjeto.RecuperarColuna().ToString();
+        return mapaObjeto.RecuperarTipo()+"_"+ aux.ToString();
     }
 
-    public void AtualizaAgente()
+    public void AtualizarAgente()
     {
         Vector3Int aux = Vector3Int.RoundToInt(transform.position);
-        GetComponent<IMapaObjeto>().Atualizar(aux.x, aux.z, GetComponent<IMapaObjeto>().RecuperarTipo());
+        IMapaObjeto mapaObjeto = GetComponent<IMapaObjeto>();
+        mapaObjeto.Atualizar(aux.x, aux.z, mapaObjeto.RecuperarTipo());
     }
 }

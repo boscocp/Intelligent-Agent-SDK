@@ -21,7 +21,7 @@ public class AgenteUtil
                 float dist = Vector3.Distance(agente.Destino, agente.transform.position);
                 if (dist <= agente.DistanciaMinima)
                 {
-                    agente.AtualizaAgente();
+                    agente.AtualizarAgente();
                     agente.transform.position = agente.Destino;
                     agente.Moving = false;
                 }
@@ -31,12 +31,11 @@ public class AgenteUtil
     }
     public static bool PodeMover(Agente agente, List<Agente> agentes)
     {
-        Vector3Int destino = Vector3Int.RoundToInt(agente.Destino);
         foreach (Agente outroAgente in agentes)
         {
             if (outroAgente.transform.position != agente.transform.position
-                && outroAgente.Destino == destino
-                && outroAgente.Destino == agente.transform.position)
+                && outroAgente.Destino == agente.Destino
+                /*&& outroAgente.Destino == agente.transform.position*/)
                 return false;
         }
         return true;
