@@ -149,6 +149,7 @@ public class GameManager : MonoBehaviour
         {
             if (agenteOnline != null) agenteOnline.Desligar();
         }
+        _agentesOnline.Clear();
     }
 
     private bool VerificarListaPopulada<T>(List<T> list)

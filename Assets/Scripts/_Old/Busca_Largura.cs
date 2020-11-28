@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Busca_Largura_Old : Busca_Old, IBusca
+public class Busca_Largura_Old : Busca_Old, IBusca_Old
 {
     private int _inicial, _final;
     public List<int> Executar()
@@ -23,8 +23,8 @@ public class Busca_Largura_Old : Busca_Old, IBusca
         {
             if (!fila.Any())
             {
-                return null;
                 Debug.Log("Nao e possivel encontrar um caminho");
+                return null;
             }
 
             tileAtual = fila[0];

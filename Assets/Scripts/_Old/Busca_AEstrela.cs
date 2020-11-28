@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 
 
-public class Busca_AEstrela_Old : Busca_Old, IBusca
+public class Busca_AEstrela_Old : Busca_Old, IBusca_Old
 {
     void Start()
     {

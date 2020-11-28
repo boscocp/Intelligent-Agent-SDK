@@ -12,9 +12,7 @@ public class AgenteAspirador : Agente
     public override void Start()
     {
         base.Start();
-        Moving = true;
         nome = titulo.text;
-        Destino = Vector3Int.RoundToInt(transform.position + transform.forward);
     }
 
     public override void Ligar()
@@ -76,7 +74,7 @@ public class AgenteAspirador : Agente
         Score -= 1;
     }
 
-    private void MoverFrente()
+    private void MoverFrente() // precisei copiar pra agenteBusca
     {
         List<IMapaObjeto> agentesMO = GameManager.Instance.MapaAtual.RecuperarObjetosPor("agente");
         List<Agente> agentes = new List<Agente>();
@@ -85,7 +83,7 @@ public class AgenteAspirador : Agente
         {
             agentes.Add(objeto.GetComponent<Agente>());
         }
-        StartCoroutine(AgenteUtil.MoverFrente(this, _obstaculos, agentes));
+        StartCoroutine(AgenteUtil.MoverFrente(this, agentes));
         //if(!AgenteUtil.VerificarObstaculo(this,_obstaculos,Destino.x,Destino.z)) Score -= 1;
     }
     private void RemoveSujeira()

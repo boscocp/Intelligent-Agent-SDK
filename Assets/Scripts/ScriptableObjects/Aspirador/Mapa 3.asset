@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06cb60ec23442a14784e4d609a2049fa, type: 3}
-  m_Name: Mapa 1
+  m_Name: Mapa 0
   m_EditorClassIdentifier: 
   linhas: 15
-  colunas: 15
+  colunas: 10
   objetos:
   - {fileID: 11400000, guid: 0bef5b2ef19a867419608a18081e2097, type: 2}
   - {fileID: 11400000, guid: efaa7ee9f8e04c54da4bfc1411144059, type: 2}
+  - {fileID: 11400000, guid: a3779603b82197b46b4e298bd3ca4de1, type: 2}

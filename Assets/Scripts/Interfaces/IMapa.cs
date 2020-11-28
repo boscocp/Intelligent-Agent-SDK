@@ -8,5 +8,6 @@ public interface IMapa
     IMapaObjeto AdicionarObjeto(int linha, int coluna, string tipo);
     List<IMapaObjeto> RecuperarObjetosPor(string tipo);
     List<IMapaObjeto> RecuperarObjetosPor(int linha, int coluna);
+    int[] RecuperarTamanho();
     void Destruir();
 }

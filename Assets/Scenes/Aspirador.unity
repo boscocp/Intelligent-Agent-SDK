@@ -357,8 +357,7 @@ MonoBehaviour:
   _velocidadeJogo: 5
   mapaEscolhido: 0
   mapasSO:
-  - {fileID: 11400000, guid: dd422aa2c97d2d140af515620aa989ff, type: 2}
-  - {fileID: 11400000, guid: 3faa8b8acba623542aa6e05a1d067c47, type: 2}
+  - {fileID: 11400000, guid: 85857da1c3bcad84c8f1eca9872184a7, type: 2}
 --- !u!4 &2001816615
 Transform:
   m_ObjectHideFlags: 0
@@ -391,7 +390,7 @@ MonoBehaviour:
   prefabs:
   - {fileID: 2034977587193035355, guid: 209cf84030841d140a358732aed7b241, type: 3}
   - {fileID: 6720269021001786308, guid: acfaf082e76d1a64388e93552a7c4684, type: 3}
-  - {fileID: 1243714524725566473, guid: 398d8001df346954e8b05f36319df89b, type: 3}
+  - {fileID: 1243714524725566473, guid: a767706ea3bfb604092243ce1ea68fc7, type: 3}
   tipos:
   - parede
   - sujeira

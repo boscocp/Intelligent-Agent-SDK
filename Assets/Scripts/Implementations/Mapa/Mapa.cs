@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Mapa : MonoBehaviour, IMapa
 {
+    private int[] _tamanho;
     private const string BORDA = "borda";
     private const string CHAO = "chao";
     private const string OBJETOS = "objetos";
@@ -28,6 +29,7 @@ public class Mapa : MonoBehaviour, IMapa
     public void Criar(int linhas, int colunas)
     {
         InstanciarChao(linhas, colunas);
+        _tamanho = new int[] {linhas,colunas};
         if (bordas) InstanciarBorda(linhas, colunas);
     }
     public IMapaObjeto AdicionarObjeto(int linha, int coluna, string tipo)
@@ -179,5 +181,10 @@ public class Mapa : MonoBehaviour, IMapa
         parent.name = nome;
         todosObjetos.Add(parent);
         return parent;
+    }
+
+    public int[] RecuperarTamanho()
+    {
+        return _tamanho;
     }
 }

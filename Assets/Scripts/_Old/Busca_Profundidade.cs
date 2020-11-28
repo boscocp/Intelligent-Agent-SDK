@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Busca_Profundidade_Old : Busca_Old, IBusca
+public class Busca_Profundidade_Old : Busca_Old, IBusca_Old
 
 {
     private int _inicial, _final;
@@ -24,8 +24,8 @@ public class Busca_Profundidade_Old : Busca_Old, IBusca
         {
             if (!pilha.Any())
             {
-                return null;
                 Debug.Log("Nao e possivel encontrar um caminho");
+                return null;
             }
 
             tileAtual = pilha[pilha.Count - 1];

@@ -7,12 +7,12 @@ public class AgenteAchaCaminho : Agente_Old, IAgente_Old //patchfinder
 {
     public int _irAteh =0;
     public int IrAteh  { get => _irAteh; set => _irAteh = value; }
-    private IBusca _busca;
+    private IBusca_Old _busca;
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
-        _busca = gameObject.GetComponent<IBusca>();
+        _busca = gameObject.GetComponent<IBusca_Old>();
     }
 
     public IEnumerator LigarAgente()

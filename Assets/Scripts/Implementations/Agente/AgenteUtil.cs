@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class AgenteUtil
 {
-    public static IEnumerator MoverFrente(Agente agente, List<string> obstaculos, List<Agente> agentes)
+    public static IEnumerator MoverFrente(Agente agente, List<Agente> agentes)
     {
 
         agente.Destino = Vector3Int.RoundToInt(agente.transform.position + agente.transform.forward);
-        if (!VerificarObstaculo(agente, obstaculos, agente.Destino.x, agente.Destino.z)
+        if (!VerificarObstaculo(agente, agente.Destino.x, agente.Destino.z)
             && PodeMover(agente, agentes))
         {
 
@@ -72,11 +72,11 @@ public class AgenteUtil
         agente.Destino = Vector3Int.RoundToInt(agente.transform.position + agente.transform.forward);
     }
 
-    public static bool VerificarObstaculo(Agente agente, List<string> obstaculos, int linha, int coluna)
+    public static bool VerificarObstaculo(Agente agente, int linha, int coluna)
     {
         foreach (string tipo in agente.Sentir(linha, coluna))
         {
-            if (obstaculos.Contains(tipo)) return true;
+            if (agente._obstaculos.Contains(tipo)) return true;
         }
         return false;
     }
